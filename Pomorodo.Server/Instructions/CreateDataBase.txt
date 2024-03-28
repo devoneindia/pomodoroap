@@ -1,0 +1,13 @@
+﻿ 
+ 
+ "entrydb": "User ID=apentry01;Password=Apentry02;Host=localhost;Port=5432;Database=apentrydb;Connection Lifetime=0;"
+
+  "entrydb": "User ID=apentry01;Password=Apentry02;Host=localhost;Port=5432;Database=apentrydb;Connection Lifetime=0;"
+
+
+
+CREATE USER apentry01 WITH password 'Apentry02';
+CREATE DATABASE apentrydb;
+GRANT ALL PRIVILEGES ON DATABASE apentrydb TO apentry01;
+\c apentrydb
+GRANT ALL on SCHEMA public to apentry01;
